@@ -1,0 +1,28 @@
+import unittest
+from battery import Battery
+from engine import Engine
+
+class BatteryTests(unittest.TestCase):
+    def test_battery_charge(self):
+        battery = Battery()
+        self.assertEqual(battery.charge(), "Battery charged")  # Assuming charge() method returns a string
+        
+    def test_battery_discharge(self):
+        battery = Battery()
+        self.assertEqual(battery.discharge(), "Battery discharged")  # Assuming discharge() method returns a string
+        
+    # Add more test cases for other battery methods or behaviors
+    
+class EngineTests(unittest.TestCase):
+    def test_engine_start(self):
+        engine = Engine()
+        self.assertTrue(engine.start())  # Assuming start() method returns a boolean
+        
+    def test_engine_stop(self):
+        engine = Engine()
+        self.assertTrue(engine.stop())  # Assuming stop() method returns a boolean
+        
+    # Add more test cases for other engine methods or behaviors
+
+if __name__ == '__main__':
+    unittest.main()
